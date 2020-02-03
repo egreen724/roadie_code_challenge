@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProductDescription = () => {
   return (
-    <div>
+    <div className="product">
       <h2>ROADIE COMMUNICATOR - INCLUDES INSTALLATION SOFTWARE</h2>
       <p>by Roadie </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
