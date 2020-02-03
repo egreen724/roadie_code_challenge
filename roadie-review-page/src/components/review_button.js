@@ -1,10 +1,15 @@
 import React from 'react'
 
 const ReviewButton = () => {
+
+  // addReviewClick = () => {
+  //
+  // }
+
   return (
-    <div className="button">
-      <button>Leave Review</button>
-      <button>Add to Card</button>
+    <div className="button-container">
+      <button className="white" onClick={() => this.addReviewClick()}>Leave Review</button>
+      <button className="teal">Add to Cart</button>
     </div>
   );
 };

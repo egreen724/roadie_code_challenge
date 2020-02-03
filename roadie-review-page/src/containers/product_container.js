@@ -6,9 +6,11 @@ class ProductContainer extends Component {
 
   render() {
     return (
-      <div className='product-container'>
-        <img id='logo' src='https://i.imgur.com/Jzqn8h7.jpg' />
-        <ProductDescription />
+      <div>
+        <div className='product-container'>
+          <img id='logo' src='https://i.imgur.com/Jzqn8h7.jpg' />
+          <ProductDescription />
+        </div>
         <ReviewButton />
       </div>
 

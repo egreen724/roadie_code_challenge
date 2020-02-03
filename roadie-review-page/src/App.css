@@ -21,3 +21,26 @@ header {
   display: flex;
   float: left;
 }
+
+.button-container {
+
+}
+
+button {
+  border-radius: 4px;
+  height: 40px;
+  width: 120px;
+  padding: 4px;
+}
+
+.teal {
+  background-color: #008383;
+  color: white;
+  border: none;
+}
+
+.white {
+  background-color: white;
+  border-color: #008383;
+  color: #008383;
+}
