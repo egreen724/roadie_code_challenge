@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const ReviewForm = () => {
+
+class ReviewForm extends Component {
 
   state = {
     rating: '',
@@ -15,14 +16,19 @@ const ReviewForm = () => {
    this.setState({[name]: value});
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
 
-  return (
-    <div className="form">
-      <button id="x-button">X</button>
+  }
+
+  render() {
+    return (
+    <div>
+    <button id="x-button">X</button>
 
       <h1>ADD REVIEW</h1>
 
-      <form>
+      <form onSubmit={this.handleSubmit}>
 
         <label>Rating</label>
         <select value={this.state.rating}>
@@ -57,9 +63,10 @@ const ReviewForm = () => {
         <button className="white">Cancel</button>
         <input type='submit' className="teal">Submit</submit>
       </form>
-
     </div>
-  );
+    )
+  }
+
 };
 
 export default ReviewForm;
