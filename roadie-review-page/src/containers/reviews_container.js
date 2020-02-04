@@ -5,6 +5,7 @@ import ReviewCard from '../components/review-card.js'
 class ReviewsContainer extends Component {
 
   state = {
+    ratingSelection: '',
     reviews: [
       {
         name: "Test User",
@@ -38,16 +39,26 @@ class ReviewsContainer extends Component {
   }
 
   renderReviews = () => {
-    this.state.reviews.map(review => {
-      <ReviewCard review={this.review}/>
+    let filteredReviews = this.state.reviews
+
+    if (this.state.ratingSelection !== '') {
+      filteredReviews = this.state.reviews.filter(review => review.rating === this.state.ratingSelection)
+    } else {
+      filteredReviews = this.state.reviews
+    }
+
+    filteredReviews.map(review => {
+      return <ReviewCard review={this.review}/>
     })
   }
+
+
 
   render() {
     return (
       <div>
         <h2>CUSTOMER REVIEWS</h2>
-        <ReviewFilter />
+        <ReviewFilter reviews={this.state.reviews}/>
         {this.renderReviews()}
       </div>
 

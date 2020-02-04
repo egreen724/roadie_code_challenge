@@ -44,3 +44,7 @@ button {
   border-color: #008383;
   color: #008383;
 }
+
+.filter-container {
+  width: 250px; 
+}
