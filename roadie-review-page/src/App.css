@@ -46,5 +46,49 @@ button {
 }
 
 .filter-container {
-  width: 250px; 
+  width: 250px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  z-index: 1010;
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+  margin: 20px;
+}
+
+#x-button {
+  border-style: none;
+  float: right;
+}
+
+.modal-overlay {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+input {
+  width: 80%;
+}
+
+#teal-submit {
+  background-color: #008383;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  width: 120px;
+  padding: 4px;
 }

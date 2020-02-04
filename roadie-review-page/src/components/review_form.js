@@ -42,47 +42,59 @@ class ReviewForm extends Component {
       return null
     } else {
     return (
-    <div>
-      <button id="x-button" onClick={this.handleClose}>X</button>
+      <div>
+        <div className="modal">
+        <button id="x-button" onClick={this.handleClose}>X</button>
 
-      <h1>ADD REVIEW</h1>
+        <h1>ADD REVIEW</h1>
 
-      <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
 
-        <label>Rating</label>
-        <select onChange={this.handleChange} name='rating' value={this.state.rating}>
-          <option value="1">One star</option>
-          <option value="2">Two stars</option>
-          <option value="3">Three stars</option>
-          <option value="4">Four stars</option>
-          <option value="5">Five stars</option>
-        </select>
+          <label>Rating</label>
+          <br></br>
+          <select onChange={this.handleChange} name='rating' value={this.state.rating}>
+            <option value="1">One star</option>
+            <option value="2">Two stars</option>
+            <option value="3">Three stars</option>
+            <option value="4">Four stars</option>
+            <option value="5">Five stars</option>
+          </select>
+          <br></br>
+          <label>Your name</label>
+          <br></br>
+          <input
+            type='text'
+            name='name'
+            onChange={this.handleChange}
+            placeholder="Enter text here..."
+          />
+          <br></br>
+          <label>Review Title</label>
+          <br></br>
+          <input
+            type='text'
+            name='title'
+            placeholder="Enter text here..."
+            onChange={this.handleChange}
+          />
+          <br></br>
+          <label>Write your review below</label>
+          <br></br>
+          <input
+            type='textarea'
+            name='content'
+            placeholder="Enter text here..."
+            onChange={this.handleChange}
+          />
+          <br></br>
+          <br></br>
+          <button className="white" onClick={this.handleClose}>Cancel</button>
+          <input type='submit' id="teal-submit" value="Submit"/>
+        </form>
+      </div>
+    <div className="modal-overlay"> </div>
+  </div>
 
-        <label>Your name</label>
-        <input
-          type='text'
-          name='name'
-          onChange={this.handleChange}
-        />
-
-        <label>Review Title</label>
-        <input
-          type='text'
-          name='title'
-          onChange={this.handleChange}
-        />
-
-        <label>Write your review below</label>
-        <input
-          type='textarea'
-          name='content'
-          onChange={this.handleChange}
-        />
-
-        <button className="white">Cancel</button>
-        <input type='submit' className="teal" value="Submit"/>
-      </form>
-    </div>
     )
   }
 }
