@@ -21,11 +21,11 @@ class ReviewForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    if (this.state.name === "" || " ") {
+    if (this.state.name === "") {
       return alert("The name field cannot be blank.")
-    } else if (this.state.title === "" || ' ') {
+    } else if (this.state.title === "") {
       return alert("The title field cannot be blank.")
-    } else if (this.state.content === "" || ' ') {
+    } else if (this.state.content === "") {
       return alert("The review cannot be blank.")
     } else {
       console.log(this.state)
@@ -46,7 +46,7 @@ class ReviewForm extends Component {
         <div className="modal">
         <button id="x-button" onClick={this.handleClose}>X</button>
 
-        <h1>ADD REVIEW</h1>
+        <h1 id="modal-header">ADD REVIEW</h1>
 
         <form onSubmit={this.handleSubmit}>
 
