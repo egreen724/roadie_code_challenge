@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-
+import StarRating from './star-rating.js'
 
 class ReviewFilter extends Component {
-
 
   findAverage = () => {
     let ratings = this.props.reviews.map(review => review.rating)
@@ -14,7 +13,7 @@ class ReviewFilter extends Component {
   render() {
     return (
     <div className="filter-container">
-      <p> {this.findAverage()}</p>
+      <StarRating rating={this.findAverage()} /> {this.findAverage()} out of 5
       <p> {this.props.reviews.length} reviews </p>
 
       <a href="#" onClick={() => (this.props.setRatingFilter(5))}>5 star</a>
