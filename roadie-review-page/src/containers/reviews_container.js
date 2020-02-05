@@ -38,6 +38,12 @@ class ReviewsContainer extends Component {
     ]
   }
 
+  setRatingFilter = (userSelection) => {
+    this.setState({
+      ratingSelection: userSelection
+    })
+  }
+
   renderReviews = () => {
     let filteredReviews = this.state.reviews
 
@@ -47,9 +53,10 @@ class ReviewsContainer extends Component {
       filteredReviews = this.state.reviews
     }
 
-    filteredReviews.map(review => {
-      return <ReviewCard review={this.review}/>
+    return filteredReviews.map(review => {
+      return <ReviewCard review={review}/>
     })
+
   }
 
 
@@ -58,8 +65,11 @@ class ReviewsContainer extends Component {
     return (
       <div>
         <h2>CUSTOMER REVIEWS</h2>
-        <ReviewFilter reviews={this.state.reviews}/>
-        {this.renderReviews()}
+        <ReviewFilter setRatingFilter={this.setRatingFilter} reviews={this.state.reviews}/>
+
+        <div className="review-container">
+          {this.renderReviews()}
+        </div>
       </div>
 
     )

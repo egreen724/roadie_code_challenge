@@ -3,9 +3,6 @@ import React, { Component } from 'react'
 
 class ReviewFilter extends Component {
 
-  setRatingFilter = () => {
-
-  }
 
   findAverage = () => {
     let ratings = this.props.reviews.map(review => review.rating)
@@ -20,11 +17,11 @@ class ReviewFilter extends Component {
       <p> {this.findAverage()}</p>
       <p> {this.props.reviews.length} reviews </p>
 
-      <a href="#" onClick={this.setRatingFilter}>5 star</a>
-      <a href="#" onClick={this.setRatingFilter}>4 star</a>
-      <a href="#" onClick={this.setRatingFilter}>3 star</a>
-      <a href="#" onClick={this.setRatingFilter}>2 star</a>
-      <a href="#" onClick={this.setRatingFilter}>1 star</a>
+      <a href="#" onClick={() => (this.props.setRatingFilter(5))}>5 star</a>
+      <a href="#" onClick={() => (this.props.setRatingFilter(4))}>4 star</a>
+      <a href="#" onClick={() => this.props.setRatingFilter(3)}>3 star</a>
+      <a href="#" onClick={() => this.props.setRatingFilter(2)}>2 star</a>
+      <a href="#" onClick={() => this.props.setRatingFilter(1)}>1 star</a>
     </div>
     )
   }

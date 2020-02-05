@@ -61,6 +61,7 @@ button {
   z-index: 1010;
   background: white;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+  padding: 10px;
   margin: auto;
   border-radius: 4px;
 }
@@ -68,6 +69,8 @@ button {
 #x-button {
   border-style: none;
   float: right;
+  width: auto;
+  height: auto;
 }
 
 .modal-overlay {
@@ -99,4 +102,25 @@ input {
 
 #modal-header {
   text-align: center;
+}
+
+.review {
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  min-height: 230px;
+  float: left;
+  margin: 8px;
+  padding: 5px;
+
+}
+
+.filter-container {
+  width: 250px;
+}
+
+.review-container {
+  float: right;
 }
