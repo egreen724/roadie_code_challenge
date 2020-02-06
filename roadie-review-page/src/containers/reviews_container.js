@@ -6,36 +6,7 @@ class ReviewsContainer extends Component {
 
   state = {
     ratingSelection: '',
-    reviews: [
-      {
-        name: "Test User",
-        title: "Perfect",
-        rating: 5,
-        date: "01/01/20",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-      {
-        name: "Test User",
-        title: "Great device!",
-        rating: 4,
-        date: "01/01/20",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-      {
-        name: "Test User",
-        title: "Easy installation",
-        rating: 4,
-        date: "01/01/20",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-      {
-        name: "Test User",
-        title: "Not bad",
-        rating: 3,
-        date: "01/01/20",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
-    ]
+
   }
 
   setRatingFilter = (userSelection) => {
@@ -65,7 +36,7 @@ class ReviewsContainer extends Component {
     return (
       <div>
         <h2>CUSTOMER REVIEWS</h2>
-        <ReviewFilter setRatingFilter={this.setRatingFilter} reviews={this.state.reviews}/>
+        <ReviewFilter setRatingFilter={this.setRatingFilter} reviews={this.props.reviews}/>
 
         <div className="review-container">
           {this.renderReviews()}

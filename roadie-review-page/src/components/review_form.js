@@ -4,10 +4,12 @@ import React, { Component } from 'react'
 class ReviewForm extends Component {
 
   state = {
-    rating: '',
-    name: '',
-    title: '',
-    content: ''
+    review: {
+      rating: '',
+      name: '',
+      title: '',
+      content: ''
+    }
   }
 
   handleChange = (event) => {
@@ -21,14 +23,14 @@ class ReviewForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    if (this.state.name === "") {
+    if (this.state.review.name === "") {
       return alert("The name field cannot be blank.")
-    } else if (this.state.title === "") {
+    } else if (this.state.review.title === "") {
       return alert("The title field cannot be blank.")
-    } else if (this.state.content === "") {
+    } else if (this.state.review.content === "") {
       return alert("The review cannot be blank.")
     } else {
-      console.log(this.state)
+      this.props.addReview(this.state.review)
     }
 
   }
