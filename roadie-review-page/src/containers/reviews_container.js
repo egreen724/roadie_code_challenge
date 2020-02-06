@@ -16,12 +16,13 @@ class ReviewsContainer extends Component {
   }
 
   renderReviews = () => {
-    let filteredReviews = this.state.reviews
+  
+    let filteredReviews = this.props.reviews
 
     if (this.state.ratingSelection !== '') {
-      filteredReviews = this.state.reviews.filter(review => review.rating === this.state.ratingSelection)
+      filteredReviews = this.props.reviews.filter(review => review.rating === this.state.ratingSelection)
     } else {
-      filteredReviews = this.state.reviews
+      filteredReviews = this.props.reviews
     }
 
     return filteredReviews.map(review => {

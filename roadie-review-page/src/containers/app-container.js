@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ProductContainer from './containers/product_container.js'
-import ReviewsContainer from './containers/reviews_container.js'
+import ProductContainer from './product_container.js'
+import ReviewsContainer from './reviews_container.js'
 
 export default class AppContainer extends Component {
 
@@ -39,7 +39,7 @@ export default class AppContainer extends Component {
 
   addReview = (newReview) => {
     this.setState({
-      ...this.state, reviews: this.state.reviews.push(newReview)
+      reviews: [...this.state.reviews, newReview]
     })
   }
 

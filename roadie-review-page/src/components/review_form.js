@@ -4,12 +4,11 @@ import React, { Component } from 'react'
 class ReviewForm extends Component {
 
   state = {
-    review: {
-      rating: '',
-      name: '',
-      title: '',
-      content: ''
-    }
+    name: '',
+    title: '',
+    rating: '',
+    date: new Date().toISOString().slice(0, 10),
+    content: ''
   }
 
   handleChange = (event) => {
@@ -23,20 +22,36 @@ class ReviewForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    if (this.state.review.name === "") {
+    if (this.state.name === "") {
       return alert("The name field cannot be blank.")
-    } else if (this.state.review.title === "") {
+    } else if (this.state.title === "") {
       return alert("The title field cannot be blank.")
-    } else if (this.state.review.content === "") {
+    } else if (this.state.content === "") {
       return alert("The review cannot be blank.")
     } else {
-      this.props.addReview(this.state.review)
+      this.props.addReview(this.state)
     }
+
+    this.handleClose(event)
 
   }
 
   handleClose = (event) => {
     this.props.handleClose && this.props.handleClose(event)
+  }
+
+  getDate = () => {
+    let today = new Date()
+    let day = String(today.getDate()).padStart(2, '0');
+    let month = String(today.getMonth() + 1).padStart(2, '0');
+    let year = today.getFullYear()
+
+    today = month + '/' + day + '/' + year
+
+    // this.setState = ({
+    //   date: today
+    // })
+    debugger;
   }
 
   render() {
@@ -88,6 +103,7 @@ class ReviewForm extends Component {
             placeholder="Enter text here..."
             onChange={this.handleChange}
           />
+        
           <br></br>
           <br></br>
           <button className="white" onClick={this.handleClose}>Cancel</button>
