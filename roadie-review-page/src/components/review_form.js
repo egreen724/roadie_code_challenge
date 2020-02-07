@@ -22,6 +22,7 @@ class ReviewForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
+    debugger; 
     if (this.state.name === "") {
       return alert("The name field cannot be blank.")
     } else if (this.state.title === "") {
@@ -59,11 +60,11 @@ class ReviewForm extends Component {
           <label>Rating</label>
           <br></br>
           <select onChange={this.handleChange} name='rating' value={this.state.rating}>
-            <option value="1">One star</option>
-            <option value="2">Two stars</option>
-            <option value="3">Three stars</option>
-            <option value="4">Four stars</option>
-            <option value="5">Five stars</option>
+            <option value='1'>One star</option>
+            <option value='2'>Two stars</option>
+            <option value='3'>Three stars</option>
+            <option value='4'>Four stars</option>
+            <option value='5'>Five stars</option>
           </select>
           <br></br>
           <label>Your name</label>

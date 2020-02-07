@@ -5,40 +5,26 @@ import { ResponsiveBar } from '@nivo/bar'
 class ReviewFilter extends Component {
 
   findAverage = () => {
-    let ratings = this.props.reviews.map(review => review.rating)
-
+    debugger; 
+    let ratings = this.props.reviews.map(review => parseInt(review.rating))
     let average = ratings.reduce((a,b) => a + b, 0)/ratings.length
     return average
   }
 
   setData = () => {
 
-      const data = [
-      // {rating: '5 stars', count: this.props.reviews.filter(review => review.rating === 5).length},
-      // {rating: '4 stars', count: this.props.reviews.filter(review => review.rating === 4).length},
-      // {rating: '3 stars', count: this.props.reviews.filter(review => review.rating === 3).length},
-      // {rating: '2 stars', count: this.props.reviews.filter(review => review.rating === 2).length},
-      // {rating: '1 stars', count: this.props.reviews.filter(review => review.rating === 1).length},
+    const data = [
+      {rating: '5 stars', count: this.props.reviews.filter(review => review.rating === 5).length},
+      {rating: '4 stars', count: this.props.reviews.filter(review => review.rating === 4).length},
+      {rating: '3 stars', count: this.props.reviews.filter(review => review.rating === 3).length},
+      {rating: '2 stars', count: this.props.reviews.filter(review => review.rating === 2).length},
+      {rating: '1 stars', count: this.props.reviews.filter(review => review.rating === 1).length},
 
-      {rating: '5 stars', count: 2},
-      {rating: '4 stars', count: 3},
-      {rating: '3 stars', count: 0},
-      {rating: '2 stars', count: 0},
-      {rating: '1 stars', count: 4}
     ]
     return data
   }
 
   render() {
-
-    const data = [
-      {rating: '5 stars', count: 2},
-      {rating: '4 stars', count: 3},
-      {rating: '3 stars', count: 0},
-      {rating: '2 stars', count: 0},
-      {rating: '1 stars', count: 4}
-    ]
-
     return (
     <div className="filter-container">
       <StarRating rating={this.findAverage()} /> {this.findAverage()} out of 5
