@@ -10,7 +10,13 @@ class ProductContainer extends Component {
 
   renderForm = (event) => {
     this.setState({
-      showForm: !this.state.show
+      showForm: true
+    })
+  }
+
+  closeForm = () => {
+    this.setState({
+      showForm: false
     })
   }
 
@@ -25,7 +31,7 @@ class ProductContainer extends Component {
           <button className="white" onClick={() => this.renderForm()}>Leave Review</button>
           <button className="teal">Add to Cart</button>
         </div>
-        <ReviewForm addReview={this.props.addReview} handleClose={this.renderForm} show={this.state.showForm} />
+        <ReviewForm addReview={this.props.addReview} handleClose={this.closeForm} show={this.state.showForm} />
       </div>
 
     )

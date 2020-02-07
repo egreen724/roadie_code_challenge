@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import StarRating from './star-rating.js'
-import {BarChart, Bar, XAxis, YAxis} from 'recharts';
+import { ResponsiveBar } from '@nivo/bar'
 
 class ReviewFilter extends Component {
 
@@ -14,29 +14,36 @@ class ReviewFilter extends Component {
   setData = () => {
 
       const data = [
-      {rating: '5 stars', count: this.props.reviews.filter(review => review.rating === 5).length},
-      {rating: '4 stars', count: this.props.reviews.filter(review => review.rating === 4).length},
-      {rating: '3 stars', count: this.props.reviews.filter(review => review.rating === 3).length},
-      {rating: '2 stars', count: this.props.reviews.filter(review => review.rating === 2).length},
-      {rating: '1 stars', count: this.props.reviews.filter(review => review.rating === 1).length},
+      // {rating: '5 stars', count: this.props.reviews.filter(review => review.rating === 5).length},
+      // {rating: '4 stars', count: this.props.reviews.filter(review => review.rating === 4).length},
+      // {rating: '3 stars', count: this.props.reviews.filter(review => review.rating === 3).length},
+      // {rating: '2 stars', count: this.props.reviews.filter(review => review.rating === 2).length},
+      // {rating: '1 stars', count: this.props.reviews.filter(review => review.rating === 1).length},
 
+      {rating: '5 stars', count: 2},
+      {rating: '4 stars', count: 3},
+      {rating: '3 stars', count: 0},
+      {rating: '2 stars', count: 0},
+      {rating: '1 stars', count: 4}
     ]
     return data
   }
 
-
-
   render() {
+
+    const data = [
+      {rating: '5 stars', count: 2},
+      {rating: '4 stars', count: 3},
+      {rating: '3 stars', count: 0},
+      {rating: '2 stars', count: 0},
+      {rating: '1 stars', count: 4}
+    ]
+
     return (
     <div className="filter-container">
       <StarRating rating={this.findAverage()} /> {this.findAverage()} out of 5
       <p> {this.props.reviews.length} reviews </p>
 
-      <BarChart layout={'horizontal'} width={350} height={250} data={this.setData()}>
-        <XAxis dataKey="rating" />
-        <YAxis dataKey="count" />
-        <Bar dataKey="count" fill="#FFD700" barSize={30} />
-      </BarChart>
 
       <a href="#" onClick={() => (this.props.setRatingFilter(5))}>5 star</a>
       <a href="#" onClick={() => (this.props.setRatingFilter(4))}>4 star</a>
@@ -46,6 +53,7 @@ class ReviewFilter extends Component {
     </div>
     )
   }
+
 };
 
 export default ReviewFilter;

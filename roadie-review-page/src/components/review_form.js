@@ -30,29 +30,18 @@ class ReviewForm extends Component {
       return alert("The review cannot be blank.")
     } else {
       this.props.addReview(this.state)
+
     }
 
-    this.handleClose(event)
+    this.props.handleClose()
 
   }
 
-  handleClose = (event) => {
-    this.props.handleClose && this.props.handleClose(event)
+  handleClose = () => {
+
+    this.props.handleClose()
   }
 
-  getDate = () => {
-    let today = new Date()
-    let day = String(today.getDate()).padStart(2, '0');
-    let month = String(today.getMonth() + 1).padStart(2, '0');
-    let year = today.getFullYear()
-
-    today = month + '/' + day + '/' + year
-
-    // this.setState = ({
-    //   date: today
-    // })
-    debugger;
-  }
 
   render() {
     if(!this.props.show) {
@@ -61,7 +50,7 @@ class ReviewForm extends Component {
     return (
       <div>
         <div className="modal">
-        <button id="x-button" onClick={this.handleClose}>X</button>
+        <button id="x-button" onClick={() => this.handleClose()}>X</button>
 
         <h1 id="modal-header">ADD REVIEW</h1>
 
@@ -103,10 +92,10 @@ class ReviewForm extends Component {
             placeholder="Enter text here..."
             onChange={this.handleChange}
           />
-        
+
           <br></br>
           <br></br>
-          <button className="white" onClick={this.handleClose}>Cancel</button>
+          <button className="white" onClick={() => this.handleClose()}>Cancel</button>
           <input type='submit' id="teal-submit" value="Submit"/>
         </form>
       </div>
