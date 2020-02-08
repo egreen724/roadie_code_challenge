@@ -164,6 +164,15 @@ input {
   padding-bottom: 8px;
   font-size: .75em;
   align-items: center;
+  
+}
+
+a:link {
+  color: #FFD700;
+}
+
+a:visited {
+  color: #FFD700;
 }
 
 .data-container {
@@ -180,7 +189,7 @@ input {
 
 .bar {
   height: 25px;
-  background: yellow;
+  background: #FFD700;
   z-index: 25;
 
 }
