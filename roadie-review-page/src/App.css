@@ -119,7 +119,7 @@ input {
 
 .filter-container {
   width: 250px;
-  height: 350px; 
+  height: 350px;
 }
 
 .review-container {
@@ -143,4 +143,44 @@ input {
   line-height: 2;
   font-size: 1.5em;
   color: #FFD700;
+}
+
+.graph {
+  position: relative;
+  display: flex;
+  max-width: 220px;
+  max-height: 250px;
+  background: white;
+}
+
+.bar-text {
+  height: 100%;
+  width: 20%;
+  background: white;
+}
+
+.text {
+  padding-top: 10px;
+  padding-bottom: 8px;
+  font-size: .75em;
+  align-items: center;
+}
+
+.data-container {
+  width: 100%;
+}
+
+.bar-container {
+  border: 1px solid lightgrey;
+  background-color: white;
+  margin-top: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.bar {
+  height: 25px;
+  background: yellow;
+  z-index: 25;
+
 }

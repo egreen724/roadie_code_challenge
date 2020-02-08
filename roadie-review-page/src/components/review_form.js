@@ -6,7 +6,7 @@ class ReviewForm extends Component {
   state = {
     name: '',
     title: '',
-    rating: '',
+    rating: 1,
     date: new Date().toISOString().slice(0, 10),
     content: ''
   }
@@ -22,7 +22,6 @@ class ReviewForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    debugger; 
     if (this.state.name === "") {
       return alert("The name field cannot be blank.")
     } else if (this.state.title === "") {
@@ -38,11 +37,6 @@ class ReviewForm extends Component {
 
   }
 
-  handleClose = () => {
-
-    this.props.handleClose()
-  }
-
 
   render() {
     if(!this.props.show) {
@@ -51,7 +45,7 @@ class ReviewForm extends Component {
     return (
       <div>
         <div className="modal">
-        <button id="x-button" onClick={() => this.handleClose()}>X</button>
+        <button id="x-button" onClick={() => this.props.handleClose()}>X</button>
 
         <h1 id="modal-header">ADD REVIEW</h1>
 
@@ -96,7 +90,7 @@ class ReviewForm extends Component {
 
           <br></br>
           <br></br>
-          <button className="white" onClick={() => this.handleClose()}>Cancel</button>
+          <button className="white" onClick={() => this.props.handleClose()}>Cancel</button>
           <input type='submit' id="teal-submit" value="Submit"/>
         </form>
       </div>
