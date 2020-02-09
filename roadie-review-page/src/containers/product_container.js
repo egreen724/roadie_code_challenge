@@ -24,7 +24,7 @@ class ProductContainer extends Component {
     return (
       <div>
         <div className='product-container'>
-          <img id='logo' src='https://i.imgur.com/Jzqn8h7.jpg' />
+          <img id='logo' alt='logo' src='https://i.imgur.com/Jzqn8h7.jpg' />
           <ProductDescription />
         </div>
         <div className='button-container'>

@@ -103,10 +103,36 @@ button {
 }
 
 input {
-  width: 80%;
-  border-color: light grey;
-  border-radius: 2px;
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   background-color: white;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type=textarea] {
+  width: 98%;
+  height: 100px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+input[type=select] {
+  margin-bottom: 10px;
+}
+
+#form-buttons {
+  position: relative;
+  left: 350px;
+  top: 20px;
 }
 
 #teal-submit {

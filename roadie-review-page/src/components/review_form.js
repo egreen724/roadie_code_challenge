@@ -83,6 +83,7 @@ class ReviewForm extends Component {
           <br></br>
           <input
             type='textarea'
+            id='textarea'
             name='content'
             placeholder="Enter text here..."
             onChange={this.handleChange}
@@ -90,8 +91,11 @@ class ReviewForm extends Component {
 
           <br></br>
           <br></br>
-          <button className="white" onClick={() => this.props.handleClose()}>Cancel</button>
-          <input type='submit' id="teal-submit" value="Submit"/>
+          <div id='form-buttons'>
+            <button className="white" onClick={() => this.props.handleClose()}>Cancel</button>
+            <input type='submit' id="teal-submit" value="Submit"/>
+          </div>
+
         </form>
       </div>
     <div className="modal-overlay"> </div>
