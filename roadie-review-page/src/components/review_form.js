@@ -81,9 +81,8 @@ class ReviewForm extends Component {
           <br></br>
           <label>Write your review below</label>
           <br></br>
-          <input
+          <textarea
             type='textarea'
-            id='textarea'
             name='content'
             placeholder="Enter text here..."
             onChange={this.handleChange}
