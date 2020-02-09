@@ -4,8 +4,6 @@ const ratings = [5, 4, 3, 2, 1]
 
 class BarText extends Component {
 
-  // const ratings = [1, 2, 3, 4, 5]
-
   setText = (ratings) => {
      return ratings.map((rating) => (
       <div className='text'>
@@ -28,10 +26,8 @@ const Bar = ({percent}) => {
   return (
     <div className="bar-container">
       <div className="bar" style={{width: `${percent}%`}}>
-
       </div>
     </div>
-
   )
 }
 
