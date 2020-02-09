@@ -35,7 +35,7 @@ class ReviewsContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="bottom-section">
         <h2>CUSTOMER REVIEWS</h2>
         <ReviewFilter setRatingFilter={this.setRatingFilter} reviews={this.props.reviews}/>
 
