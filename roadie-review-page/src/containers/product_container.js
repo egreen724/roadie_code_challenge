@@ -28,8 +28,8 @@ class ProductContainer extends Component {
           <ProductDescription />
         </div>
         <div className="button-container">
-          <button className="white" onClick={() => this.renderForm()}>Leave Review</button>
-          <button className="teal">Add to Cart</button>
+          <button className="white" onClick={() => this.renderForm()}>LEAVE REVIEW</button>
+          <button className="teal">ADD TO CART</button>
         </div>
         <ReviewForm addReview={this.props.addReview} handleClose={this.closeForm} show={this.state.showForm} />
       </div>

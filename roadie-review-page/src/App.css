@@ -23,7 +23,8 @@ header {
 }
 
 .button-container {
-
+  width: auto;
+  height: auto;
 }
 
 button {
@@ -31,6 +32,8 @@ button {
   height: 40px;
   width: 120px;
   padding: 4px;
+  margin: 4px;
+  font-weight: bold;
 }
 
 .teal {
@@ -107,13 +110,15 @@ input {
 .review {
   border-style: solid;
   border-width: 1px;
+  border-color: lightgrey;
   display: inline-block;
-  width: 250px;
+  width: 280px;
   height: auto;
   min-height: 230px;
   float: left;
   margin: 8px;
-  padding: 5px;
+  padding: 15px;
+  padding-top: 5px;
 
 }
 
@@ -123,11 +128,13 @@ input {
 }
 
 .review-container {
-  float: right;
+  position: relative;
+  left: 280px;
+  top: -365px;
+  width: 700px;
 }
 
 .star {
-
   display: inline-block;
   padding: 3px;
   vertical-align: middle;
@@ -142,9 +149,38 @@ input {
   vertical-align: middle;
   line-height: 2;
   font-size: 1.5em;
-  color: #FFD700;
+  color: #d3af37;
 }
 
+.star-rating {
+  position: relative;
+  left: 150px;
+  top: -50px;
+}
+
+#average-stars {
+  position: relative;
+  left: -150px;
+  top: 30px;
+
+}
+
+#average {
+  position: relative;
+  left: 150px;
+  top: -65px;
+  font-size: .75em;
+}
+
+p {
+  position: relative;
+  top: -60px;
+}
+
+.graph-wrapper {
+  position: relative;
+  top: -60px;
+}
 .graph {
   position: relative;
   display: flex;
@@ -164,15 +200,15 @@ input {
   padding-bottom: 8px;
   font-size: .75em;
   align-items: center;
-  
+
 }
 
 a:link {
-  color: #FFD700;
+  color: #d3af37;
 }
 
 a:visited {
-  color: #FFD700;
+  color: #d3af37;
 }
 
 .data-container {
@@ -189,7 +225,7 @@ a:visited {
 
 .bar {
   height: 25px;
-  background: #FFD700;
+  background: #d3af37;
   z-index: 25;
 
 }
