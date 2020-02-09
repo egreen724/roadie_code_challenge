@@ -19,6 +19,7 @@ class ReviewFilter extends Component {
       <div id='average-stars'>
         <StarRating rating={this.findAverage()} />
       </div>
+      
       <p id='average'> {this.findAverage()} out of 5 </p>
       <p> {this.props.reviews.length} reviews </p>
       <Graph reviews={this.props.reviews} setRatingFilter={this.props.setRatingFilter}/>

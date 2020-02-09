@@ -27,7 +27,7 @@ class ProductContainer extends Component {
           <img id='logo' src='https://i.imgur.com/Jzqn8h7.jpg' />
           <ProductDescription />
         </div>
-        <div className="button-container">
+        <div className='button-container'>
           <button className="white" onClick={() => this.renderForm()}>LEAVE REVIEW</button>
           <button className="teal">ADD TO CART</button>
         </div>

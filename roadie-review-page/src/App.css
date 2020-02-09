@@ -1,7 +1,8 @@
 .App {
   text-align: left;
   margin: auto;
-  width: 80%;
+  max-width: 1400px;
+  width: 90%;
 }
 
 header {
@@ -9,7 +10,8 @@ header {
   height: 40px;
   display: flex;
   flex-direction: column;
-
+  width: 100%;
+  min-width: 600px;
 }
 
 #logo {
@@ -22,15 +24,29 @@ header {
   float: left;
 }
 
+#product-text {
+  position: relative;
+  top: 50px;
+  width: 90%;
+}
+
+ul {
+  position: relative;
+  top: -50px;
+}
+
 .button-container {
-  width: auto;
-  height: auto;
+  width: 400px;
+  height: 50px;
+  position: relative;
+  left: 600px;
+  top: -60px;
 }
 
 button {
   border-radius: 4px;
   height: 40px;
-  width: 120px;
+  width: 150px;
   padding: 4px;
   margin: 4px;
   font-weight: bold;
@@ -169,7 +185,7 @@ input {
   position: relative;
   left: 150px;
   top: -65px;
-  font-size: .75em;
+  font-size: .8em;
 }
 
 p {
